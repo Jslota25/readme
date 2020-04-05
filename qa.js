@@ -8,3 +8,5 @@ inquirer.prompt([
         message: "What is the name of your project?" 
     },
 ])
+
+fs.writeFile();
