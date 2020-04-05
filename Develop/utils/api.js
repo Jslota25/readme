@@ -3,12 +3,12 @@ const axios = require("axios");
 const api = {
   getUser(username) {
     axios
-    .get('https://github.com/users/${username}',
+    .get("https://github.com/users/${username}",
     {
-      headers: {"Authorization": 'token ${process.env.GH_TOKEN}'}
+      headers: {"Authorization": "token ${process.env.GH_TOKEN}"}
     }
     )
-    .then(response => console.log(response))
+    .then(response => console.log(response.data))
     .catch(error => console.log(error))
 
   }
