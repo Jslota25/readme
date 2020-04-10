@@ -66,3 +66,36 @@ function getUser(username, answers) {
     }
 
 }
+
+//Generate Readme
+function generateReadme (data, answers) {
+    console.log(data, answers);
+    const readme = `
+
+### Title: ${answers.title}
+____
+#### Table of Contents:
+##### 1. Title
+##### 2. Contributors
+##### 3. Technologies
+##### 5. About
+##### 6. License
+##### 7. Install
+##### 8. Github
+_____
+#### Contributors: ${answers.contributors}
+____
+#### Technologies: ${answers.technologies}
+____
+#### About: ${answers.about}
+____ 
+#### License: ${answers.license}
+____
+#### Install: ${answers.install}
+____
+#### Contact: ${answers.username}
+
+![avatar](https://avatars1.githubusercontent.com/u/${data.avatar_URL}?v=4)   
+
+`
+}
