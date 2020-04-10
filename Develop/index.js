@@ -65,7 +65,6 @@ function getUser(username, answers) {
         }) 
         .catch(error => console.log(error))
     }
-
 }
 
 //Generate Readme
