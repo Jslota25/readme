@@ -9,6 +9,11 @@ function questions() {
     inquirer.prompt([
     {
         type: "input",
+        name: "username",
+        message: "What is your GitHub username?",  
+    },
+    {
+        type: "input",
         name: "title",
         message: "What is the title of your project?"
     },
@@ -38,11 +43,7 @@ function questions() {
         name: "install",
         message: "How does a user install the project?"
     },
-    {
-        type: "input",
-        name: "username",
-        message: "What is your GitHub username?",  
-    },
+    
 ])
 
 //Pulls user's Github username
