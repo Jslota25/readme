@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const axios = require('axios');
-require('dotenv').config();
+const axios = require("axios");
+require("dotenv").config();
+require("./api.js")
 
 //Readme questions
 function questions() {
@@ -98,4 +99,11 @@ ____
 ![avatar](https://avatars1.githubusercontent.com/u/${data.avatar_URL}?v=4)   
 
 `
+fs.writeFile("readme.md", readme, function(err) {
+    if (err) {
+    return console.log(err);
+    }
+    });
 }
+
+questions();
