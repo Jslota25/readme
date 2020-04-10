@@ -49,6 +49,20 @@ function questions() {
 .then(function(answers) {
     let username = answers.username;
     getUser(username, answers);
-})
+});
+
+//API Call
+function getUser(username, answers) {
+    axios
+    .get(`https://api.github.com/users/${username}`, 
+    {
+      headers: {"Authorization": `token ${process.env.GH_TOKEN}`}
+    })
+      .then(function(res) {
+          const data = res.data
+        generateReadme(data, answers);
+        }) 
+        .catch(error => console.log(error))
+    }
 
 }
