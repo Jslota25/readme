@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
-const axios = require("axios");
 const fs = require("fs");
-require("dotenv").config()
-const token = process.env.TOKEN;
+const util = require("util");
+const axios = require('axios');
+require('dotenv').config();
 
 //Readme questions
 function questions() {
@@ -44,4 +44,11 @@ function questions() {
         message: "What is your GitHub username?",  
     },
 ])
+
+//Pulls user's Github username
+.then(function(answers) {
+    let username = answers.username;
+    getUser(username, answers);
+})
+
 }
