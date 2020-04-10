@@ -6,6 +6,9 @@
 # Tech
 Javascript, Node, Axios
 
+# Example
+![](readme.gif)
+
 # About
 This application will ask a user questions to answer to determine what info they want to include in a readme for their web application.  Once all questions are answered, the readme will be generated. 
 
